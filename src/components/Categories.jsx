@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Categories = ({ categories }) => {
 
@@ -10,10 +10,10 @@ const Categories = ({ categories }) => {
                     {/* <Link className='text-2xl font-bold'>all</Link> */}
                     {
                         categories.map(category =>
-                    <Link to={`category/${category.category}`} className='text-2xl font-bold'>
+                    <NavLink to={`category/${category.category}`} className={({isActive})=>`text-2xl font-medium ${isActive?"underline text-yellow-500 font-bold":""}`}>
 
                         {category.category}
-                    </Link>)
+                    </NavLink>)
                     }
                 </div>
             </div>

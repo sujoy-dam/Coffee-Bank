@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const nav = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/coffee">Coffee</NavLink></li>
-        <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+        <NavLink className={({isActive})=>`font-bold mr-10 ${isActive?"text-amber-500 underline":"font-bold"}`} to="/">Home</NavLink>
+        <NavLink className={({isActive})=>`font-bold mr-10 ${isActive?"text-amber-500 underline":"font-bold"}`} to="/coffee">Coffee</NavLink>
+        <NavLink className={({isActive})=>`font-bold ${isActive?"text-amber-500 underline":"font-bold"}`} to="/dashboard">Dashboard</NavLink>
     </>
     return (
         <div className="navbar bg-base-100 container mx-auto py-5">

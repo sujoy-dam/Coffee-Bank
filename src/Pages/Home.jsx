@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div>
           <Banner></Banner>
-          <Heading title={"This is a Title"} subtitle={"This is a subtitle"}></Heading>
+          <Heading title={"Browse Coffees By Category"} subtitle={"Choose your desired coffee category to browse through specific coffees that fit in your taste"}></Heading>
           <Categories categories={categories}></Categories>
           <Outlet></Outlet>
         </div>
